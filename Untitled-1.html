@@ -1,0 +1,131 @@
+<!-- 컴퓨터, 플레이어 함수 만들기
+    가위바위보는 대소문자 상관없이 작동되게 할것-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김 준태(가위바위보)</title>
+</head>
+<script>
+    
+    function computerPlay(){ //computerPlay함수 선언 (과제_3)
+        let randomNumber = Math.floor(Math.random()*3);
+    // 0~2까지의 수를 randomNumber변수에 저장
+
+        switch(randomNumber){
+            case 0:
+                return "rock";
+            case 1:
+                return "scissor";
+            case 2:
+                return "paper";
+            default:
+                break;
+        } //switch를 사용해 randomNumber의 값에 따라 특정값 return
+    }
+    
+    let playerSelection = 0;
+    let computerSelection = 0;
+    let youWin=0;
+    let computerWin=0;
+
+    function Winner(){//판정
+        
+        if(playerSelection===computerSelection){
+            console.log("비겼습니다(양쪽 선수 점수 획득");
+            youWin++;
+            computerSelection++;
+        }
+        else if(playerSelection==="rock"){
+            switch(computerSelection){
+                case "paper":
+                    console.log("당신은 졌습니다");
+                    computerWin++;
+                    break;
+                case "scissor":
+                    console.log("당신은 이겼습니다");
+                    youWin++;
+                    break;
+                default:
+                    break;
+            }
+            console.log("당신의 점수: " + youWin);
+            console.log("컴퓨터의 점수: " + computerWin);
+            
+        }
+        else if(playerSelection==="paper"){
+            switch(computerSelection){
+                case "scissor":
+                    console.log("당신은 졌습니다");
+                    computerWin++;
+                    break;
+                case "rock":
+                    console.log("당신은 이겼습니다");
+                    youWin++;
+                    break;
+                default:
+                    break;
+            }
+        }
+        else if(playerSelection==="scissor"){
+            switch(computerSelection){
+                case "rock":
+                    console.log("당신은 졌습니다");
+                    computerWin++;
+                    break;
+                case "paper":
+                    console.log("당신은 이겼습니다");
+                    youWin++;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+    }
+
+    function game() {  // playRound()함수를 5번 진행 (과제_6)
+        
+        console.log("1라운드");
+        playRound();
+        Winner();
+
+        console.log("2라운드");
+        playRound();
+        Winner();
+        
+        console.log("3라운드");
+        playRound();
+        Winner();
+        
+        console.log("4라운드");
+        playRound();
+        Winner();
+        
+        console.log("5라운드");
+        playRound();
+        Winner();
+
+        if(youWin<computerWin){
+            console.log("컴퓨터 "+computerWin+" : 당신 "+youWin+" 으로 컴퓨터가 이겼습니다.");
+        }else{
+            console.log("컴퓨터 "+computerWin+" : 당신 "+youWin+" 으로 당신이 이겼습니다.");
+        }
+    }
+
+    function playRound(/*playerSelection, computerSelection*/){ //playRound 게임을 한판 진행하는 함수 선언 (과제_4)
+        playerSelection = prompt("rock, scissor, paper");        
+                
+        computerSelection = computerPlay();
+
+        console.log("Computer: "+ computerSelection);
+        console.log("You: "+ playerSelection);
+    }
+    game();
+</script>
+<body>
+    
+</body>
+</html>
