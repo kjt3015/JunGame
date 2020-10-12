@@ -37,11 +37,11 @@
 
         switch(randomNumber){
             case 0:
-                return "rock";
+                return "바위";
             case 1:
-                return "scissor";
+                return "가위";
             case 2:
-                return "paper";
+                return "보";
         } //switch를 사용해 randomNumber의 값에 따라 특정값 return
     }
 
@@ -50,7 +50,7 @@
         // playerSelection = prompt("rock, scissor, paper");
 
         //쓰레기값 입력시
-        if(playerSelection !== "rock"&&playerSelection !== "scissor"&&playerSelection !== "paper"){            console.log("잘못된 입력입니다 다시 입력해주세요")
+        if(playerSelection !== "바위"&&playerSelection !== "가위"&&playerSelection !== "보"){            console.log("잘못된 입력입니다 다시 입력해주세요")
             // playerSelection = prompt("rock, scissor, paper");
             console.log("잘못된 값입니다.");
         }
@@ -77,13 +77,13 @@
             computerWin++;
         }
 
-        else if(playerSelection==="rock"){
+        else if(playerSelection==="바위"){
             switch(computerSelection){
-                case "paper":
+                case "보":
                     console.log("당신은 졌습니다");
                     computerWin++;
                     break;
-                case "scissor":
+                case "가위":
                     console.log("당신은 이겼습니다");
                     youWin++;
                     break;
@@ -92,13 +92,13 @@
             }   
         }
 
-        else if(playerSelection==="paper"){
+        else if(playerSelection==="보"){
             switch(computerSelection){
-                case "scissor":
+                case "가위":
                     console.log("당신은 졌습니다");
                     computerWin++;
                     break;
-                case "rock":
+                case "바위":
                     console.log("당신은 이겼습니다");
                     youWin++;
                     break;
@@ -107,13 +107,13 @@
             }
         }
 
-        else if(playerSelection==="scissor"){
+        else if(playerSelection==="가위"){
             switch(computerSelection){
-                case "rock":
+                case "바위":
                     console.log("당신은 졌습니다");
                     computerWin++;
                     break;
-                case "paper":
+                case "바위":
                     console.log("당신은 이겼습니다");
                     youWin++;
                     break;
