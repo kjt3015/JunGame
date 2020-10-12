@@ -136,8 +136,6 @@
         console.log("@@@@@ " + round + " 라운드  @@@@@");
         playRound();
         Winner();
-        // round++
-        // console.log(round);
     }
 
         //5회 실시후 최종 스코어를 통해 최종승리 판정
