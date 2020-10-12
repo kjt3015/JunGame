@@ -113,7 +113,7 @@
                     console.log("당신은 졌습니다");
                     computerWin++;
                     break;
-                case "바위":
+                case "보":
                     console.log("당신은 이겼습니다");
                     youWin++;
                     break;
