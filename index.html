@@ -1,3 +1,10 @@
+<!--     
+    * 양 선수의 선택을 이미지로 표시
+    * 웹페이지에 console화면 출력 or 게임의 진행을 웹페이지에 표시
+    * 대소문자 입력
+    * 메뉴기능 추가(가위바위보(메인), 패치노트)
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,20 +12,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JunGame</title>
     <script type="" src="Game.js"></script>
+    <link rel="stylesheet" href="Game.css">
 </head>
+
 <body>
-    <!-- <script type="" src="Game.js"></script> -->
-    <h1>가위바위보 게임</h1>
+    <h1 class="headC">가위바위보 게임</h1>
     <hr>
-    <img src="image/game.jpeg" width="30%" alt="game">
-    <hr>
-    <form id="game">
-        사용자(가위, 바위, 보): <input type="text" name="userInput" id="userInput" style="width: 100pt;">
-        <!-- <br> -->
-        <!-- 컴퓨터: <input type="text" name="comInput" id="comInput" style="width: 100pt;">
-        <br> -->
-        <input type="button" value="play" onclick="game()">
-    </form>
-    <p>게임의 결과값은 F12의 Console화면에 출력됩니다!</p>
+
+    <div>
+        <h2 >Main</h2>
+
+        <div id="grid">
+            <h3 style="text-align: right; margin-right: 10%;">[User]</h3>
+            <h3 style="text-align: left; margin-left: 10%;">[Computer]</h3>
+        </div>
+
+        <div class="headC">
+            <div style="margin-bottom: 10%;">
+                <img src="image/rock.png" width="10%" alt="userImage">
+                <img src="image/vs.png" width="10%" alt="vs">
+                <img src="image/paper.png" width="10%" alt="computerImage"> 
+            </div>
+        </div>
+        <br>
+
+        <form id="game">
+            사용자(가위, 바위, 보): <input type="text" name="userInput" id="userInput" style="width: 100pt;">
+            <input type="button" value="게임 실행" onclick="game()">
+            <input type="reset" value="지우기">
+        </form>
+
+        <p>게임의 결과값은 F12의 Console화면에 출력됩니다!</p>
+        <hr>
+    </div>
+    
+    <h2>패치노트</h2>
+    <p>====== 20.10.11 ======</p>
+        <ol>
+            <li>무승부일 경우 코드 수정</li>
+            <li>잘못된 입력일 경우 반응 추가</li>
+            <li>코드 정리/주석의 구체화</li>
+            <li>자바코드의 분리</li>
+            <li>무승부시 한쪽스코어만 오르는 현상 수정</li>
+            <li>HTML추가(image등 삽입)</li>
+            <li>스코어 표시 버그 수정</li>
+            <li>game()함수 반복문을 이용해 코드수 줄임<br>
+                ㄴtextbox botton을 이용한 입력으로 오류가 생겨 반복문에서 조건문으로 변경</li>
+            <li>최종스코어 코드 수정</li>
+            <li>라운드와 결과 구분</li>
+        </ol>
+
+        <p>====== 20.10.12 ======</p>
+        <ol>
+            <li>playRound() 의 쓰레기값입력 이벤트 구상</li>
+            <li>최종동점시 플레이어 승리 판정 수정</li>
+            <li>최종 무승부</li>
+        </ol>
+
+        <p>====== 20.10.13 ======</p>
+        <ol>
+            <li>제작자 태그(CSS적용)</li>
+            <li>패치노트 추가</li>
+            <li>지우기 버튼 추기</li>
+            <li>메인 이미지 배치 최적화</li>
+            <li>타이틀 이미지 삭제</li>
+            <li>margin을 사용한 양선수 이미지 배치</li>
+        </ol>
+        <hr>
+        <p class="maker"> MURIT / JunGameⓒ kjt3015@naver.com </p>
 </body>
 </html>
