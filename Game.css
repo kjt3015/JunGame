@@ -17,3 +17,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+.leftMargin{
+    margin-left: 30px;
+}
