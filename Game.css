@@ -1,0 +1,19 @@
+.maker{
+    margin: 20px 0px;
+    text-align: center;
+    font-size: 14px;
+    }
+    
+.headC{
+    text-align: center;
+    }
+    
+.image_1{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    }
+#grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
