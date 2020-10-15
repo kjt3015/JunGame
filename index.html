@@ -1,8 +1,7 @@
 <!--     
-    * 양 선수의 선택을 이미지로 표시
     * 웹페이지에 console화면 출력 or 게임의 진행을 웹페이지에 표시
-    * 대소문자 입력
     * 메뉴기능 추가(가위바위보(메인), 패치노트)
+    * 게임방법란 추가
  -->
 
 <!DOCTYPE html>
@@ -29,14 +28,14 @@
 
         <div class="headC">
             <div style="margin-bottom: 10%;">
-                <img src="image/rock.png" width="10%" alt="userImage">
+                <img id="userImg" src="image/Q.png" width="10%" alt="userImage">
                 <img src="image/vs.png" width="10%" alt="vs">
-                <img src="image/paper.png" width="10%" alt="computerImage"> 
+                <img id="computerImg" src="image/Q.png" width="10%" alt="computerImage"> 
             </div>
         </div>
         <br>
 
-        <form id="game">
+        <form><!-- <form id="game"> -->
             사용자(가위, 바위, 보): <input type="text" name="userInput" id="userInput" style="width: 100pt;">
             <input type="button" value="게임 실행" onclick="game()">
             <input type="reset" value="지우기">
@@ -79,6 +78,17 @@
             <li>타이틀 이미지 삭제</li>
             <li>margin을 사용한 양선수 이미지 배치</li>
             <li>leftMargin class추가적용</li>
+        </ol>
+
+        <p>====== 20.10.15 ======</p>
+        <ol>
+            <li>user와 computer의 선택을 그림으로 표시</li>
+            <li>승리시 이미지 추가 제작</li>
+            <li>승리자의 선택이미지는 승리 이미지로 표시</li>
+            <li>? 이미지 추가</li>
+            <li>게임 시작전 양 선수 ? 이미지, 비겼을때 ? 이미지</li>
+            <li>불필요한 id, class 색출/삭제</li>
+            <li>주석 정리</li>
         </ol>
     </div>
     <hr>
