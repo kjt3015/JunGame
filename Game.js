@@ -99,7 +99,7 @@
                     console.log("당신은 이겼습니다");
                     youWin++;
                     document.getElementById("computerImg").src = computerImg_info();
-                    document.getElementById("userImg").src = "image/win/paper.png";
+                    document.getElementById("userImg").src = "image/win/scissor.png";
                     break;
                 default:
                     break;
