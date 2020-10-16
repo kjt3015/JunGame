@@ -1,5 +1,4 @@
 <!--     
-    * 웹페이지에 console화면 출력 or 게임의 진행을 웹페이지에 표시
     * 메뉴기능 추가(가위바위보(메인), 패치노트)
     * 게임방법란 추가
  -->
@@ -35,13 +34,14 @@
         </div>
         <br>
 
-        <form><!-- <form id="game"> -->
+        <form class="headC">
             사용자(가위, 바위, 보): <input type="text" name="userInput" id="userInput" style="width: 100pt;">
             <input type="button" value="게임 실행" onclick="game()">
             <input type="reset" value="지우기">
         </form>
+        <br>
 
-        <p>게임의 결과값은 F12의 Console화면에 출력됩니다!</p>
+        <textarea readonly name="gamedis" id="gamedis" cols="30" rows="10" style="width: 100%; height: 100%;"></textarea>
         <hr>
     </div>
     
@@ -89,6 +89,17 @@
             <li>게임 시작전 양 선수 ? 이미지, 비겼을때 ? 이미지</li>
             <li>불필요한 id, class 색출/삭제</li>
             <li>주석 정리</li>
+        </ol>
+        <p>====== 20.10.16 ======</p>
+        <ol>
+            <li>이미지 출력 버그 패치</li>
+            <li>무승부 이미지 변경</li>
+            <li>textarea를 이용하여 게임모니터 생성</li>
+            <li>textarea 크기 조정(화면에 맞춰)</li>
+            <li>textarea readonly</li>
+            <li>게임의 진행을 textarea로 출력</li>
+            <li>textarea스크롤 자동컨트롤</li>
+            <li>main form 위치조정/삭제</li>
         </ol>
     </div>
     <hr>
