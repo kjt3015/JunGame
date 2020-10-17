@@ -21,7 +21,7 @@
     //플레이어와 컴퓨터의 선택을 최종결정
     function playRound(){
         //잘못된 입력을 받았을 때
-        if(playerSelection !== "바위"&&playerSelection !== "가위"&&playerSelection !== "보"){
+        if(playerSelection !== "바위"&&playerSelection !== "가위"&&playerSelection !== "보"&&playerSelection !== "특수문자"){
             console.log("잘못된 입력입니다 다시 입력해주세요");
             document.getElementById("gamedis").value += "잘못된 입력입니다 다시 입력해주세요\r";
         }
@@ -135,6 +135,15 @@
                     break;
             }
         }
+        else if(playerSelection==="특수문자"&&round<3){
+            document.getElementById("computerImg").src = "image/h.jpg";
+            document.getElementById("userImg").src = "image/h.jpg";
+            youWin++; 
+        }
+        else if(playerSelection==="특수문자"&&round>2){
+            alert("당신은 욕심쟁이!");
+            location.reload(true);
+        }
 
         console.log("당신의 점수: " + youWin);
         document.getElementById("gamedis").value += "당신의 점수: " + youWin + "\r";
@@ -214,9 +223,39 @@
         }
     }
 
-    function test(){
-        document.getElementById("gamedis").value +="아하\r";
+    // function test(){
+    //     document.getElementById("gamedis").value +="아하\r";
+    // }
+    // playerSelection_2=0;
+   
+    function game_2(){
+        if(round<6){
+            console.log("@@@@@ " + round + " 라운드  @@@@@");
+            document.getElementById("gamedis").value += "@@@@@ " + round + " 라운드  @@@@@\n";
+        
+        playRound();
+        Winner();
+        }
+        //5회 실시후 최종 스코어를 통해 최종승리 판정
+        if(round>5 && youWin<computerWin){//5라운드를 진행했고, 내 승리가 컴퓨터의 승리보다 적을때
+            console.log("*** 컴퓨터 "+computerWin+" : 당신 "+youWin+" 으로 컴퓨터가 이겼습니다. ***");
+            document.getElementById("gamedis").value += "*** 컴퓨터 "+computerWin+" : 당신 "+youWin+" 으로 컴퓨터가 이겼습니다. ***\n";
+        }else if(round>5 && youWin>computerWin){//5라운드를 진행했고, 내 승리가 컴퓨터의 승리보다 많을때
+            console.log("*** 컴퓨터 "+computerWin+" : 당신 "+youWin+" 으로 당신이 이겼습니다. ***");
+            document.getElementById("gamedis").value += "*** 컴퓨터 "+computerWin+" : 당신 "+youWin+" 으로 당신이 이겼습니다. ***\n";
+        }else if(round>5 && youWin==computerWin){//5라운드를 진행했고, 내 승리가 컴퓨터의 승리와 같을때
+            console.log("*** 컴퓨터 "+computerWin+" : 당신 "+youWin+" 으로 비겼습니다. ***");
+            document.getElementById("gamedis").value += "*** 컴퓨터 "+computerWin+" : 당신 "+youWin+" 으로 비겼습니다. ***\n";
+        }
+
+        //textarea 스크롤을 가장 아래로 해주는 코드
+        var textarea = document.getElementById('gamedis');
+        textarea.scrollTop = textarea.scrollHeight;
     }
+
+    // function reset(){
+    //     location.reload(true);
+    // }
     /*
 
     <참고 자료 출처>
