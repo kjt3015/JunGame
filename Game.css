@@ -39,6 +39,9 @@
     #grid_menu{
         display: block;
     }
+    #muritImg{
+        width: 100%;
+    }
 }
 
 a{
