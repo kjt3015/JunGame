@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>코로나란?</title>
+    <link  rel="stylesheet" href="코로나란.css"/>
+    </head>
+    <body>
+      <div class="define">0
+        <div class="contents">
+          <h1>코로나의 정의</h1>
+          <br> 
+        <p>
+          2019년 12월 중국 우한에서 처음 발생한 이후 중국 전역과 전 세계로 확산된, 새로운 유형의 코로나바이러스(SARS-CoV-2)에 의한 호흡기 감염질환이다.<br>
+          코로나바이러스감염증-19는 감염자의 비말(침방울)이 호흡기나 눈·코·입의 점막으로 침투될 때 전염된다.<br>
+          감염되면 약 2~14일(추정)의 잠복기를 거친 뒤 발열(37.5도) 및 기침이나 호흡곤란 등 호흡기 증상, 폐렴이 주증상으로 나타나지만 무증상 감염 사례 빈도도 높게 나오고 있다.<br>
+          <br>[네이버 지식백과] 코로나바이러스감염증-19 - (COVID-19) (시사상식사전, pmg 지식엔진연구소)
+        </p> 
+        <br>
+        <div class = "box">
+          <div class = "covbox">
+            <div class = "제목"> 코로나의 정의 </div>
+            <div class = "내용"> 2019년 12월 중국 우한에서 처음 발생한 이후 중국 전역과 전 세계로 확산된, 새로운 유형의 코로나바이러스(SARS-CoV-2)에 의한 호흡기 감염질환이다.
+              코로나바이러스감염증-19는 감염자의 비말(침방울)이 호흡기나 눈·코·입의 점막으로 침투될 때 전염된다.
+              감염되면 약 2~14일(추정)의 잠복기를 거친 뒤 발열(37.5도) 및 기침이나 호흡곤란 등 호흡기 증상, 폐렴이 주증상으로 나타나지만 무증상 감염 사례 빈도도 높게 나오고 있다.
+              
+              [네이버 지식백과] 코로나바이러스감염증-19 - (COVID-19) (시사상식사전, pmg 지식엔진연구소) </div>
+          </div>
+          <div class = "covbox2">
+            
+          </div>
+        </div>
+        </div>
+      </div>
+    </body>
+</html>
+
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+h1, p{
+    margin : 0;
+}
+
+.define{
+    background:
+    url("https://pixabay.com/get/53e0d1424c50af14f6d1867dda353678153cdee052587348_1920.jpg") no-repeat;  /*반복되지않게*/
+    background-size: cover;  /* */
+    background-position: center center; /* 백그라운드 위치는 세로축과 가로축의 중앙에 위치하도록 */
+    width: 100vw; /* 페이지의 가로 100퍼 */
+    height: 100vh; /* 페이지의 세로 100퍼  가득차도록 */
+}
+.contents{
+    font-family : '카페24 아네모네에어';
+    color: white;
+
+}
+.box{
+    display : flex;
+    
+}
+
+.covbox{
+    border : 1px solid white;
+    width : 500px;
+    height : 500px;
+    font-family : '카페24 아네모네에어';
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+
+.covbox2{
+    border : 1px solid white;
+    width : 800px;
+    height : 500px;
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+.제목{
+    border-bottom : 1px solid white;
+    font-family : '카페24 아네모네에어';
+    height : 45px;
+    margin-top : 20px;
+    font-weight : bolder;
+    font-size : 30px;
+
+}
+.내용{
+    font-family : '카페24 아네모네';
+    font-weight : bold;
+    font-size : 20px;
+    word-spacing : 5px;
+    line-height : 30px;
+    
+}
