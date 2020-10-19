@@ -1,0 +1,45 @@
+a{text-decoration: none;} /*하이퍼링크 밑줄 없애기*/
+a:visit{color:black;}
+body{
+    margin: 0px;
+    padding: 5px;
+}
+.menuicon{
+    word-spacing : 30px;
+    position : absolute;
+    top : 14% ; left: 10%;
+    margin-top : -60px;
+    font-family : '카페24 아네모네'
+}
+.background{
+    background:
+    url("https://pixabay.com/get/53e0d1424c50af14f6d1867dda353678153cdee052587348_1920.jpg") no-repeat;  /*반복되지않게*/
+    background-size: cover;  /*배경 지역이 배경이미지로 완전히 덮히도록 이미지를 가능한 크게해서 표시하기 때문에 일부가 안보일 수도 있음*/
+    background-position: center center; /* 백그라운드 위치는 세로축과 가로축의 중앙에 위치하도록 */
+    width: 100vw; /* 페이지의 가로 100퍼 */
+    height: 100vh; /* 페이지의 세로 100퍼  가득차도록 */
+}
+.leftmenu{
+    position : absolute;
+    top : 150px; right : 900px;
+    width : 400px;
+    height : 400px;
+    background : linear-gradient(to right, transparent, rgba(20, 20, 20, 0.699));
+    text-align : left;
+    font-family : '카페24 아네모네';
+    font-size : 50px;
+    color : white;
+    padding : 30px;
+}
+.rightmenu{
+    position : absolute;
+    top : 440px; right : 210px;
+    width : 800px;
+    height : 300px;
+    background : linear-gradient(to left, transparent, rgba(20, 20, 20, 0.699));
+    text-align : right;
+    font-family : '카페24 아네모네';
+    font-size : 25px;
+    color : white;
+    padding : 30px;
+}
